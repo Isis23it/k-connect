@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.font-italiana {
+  font-family: 'Italiana', serif;
+  letter-spacing: 0.05em;
+}
+
+h1, h2, h3 {
+  font-family: 'Italiana', serif;
+  font-weight: 400;
+}
+
+p, label, button, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🌗 Transición suave */
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* 🌙 Estilo general */
+.dark {
+  background-color: #121212;
+  color: #0fffcf;
+}
+
+/* ======== CABECERA ======== */
+.dark header {
+  background: linear-gradient(to bottom, #1e1e1e, #2a2a2a);
+}
+
+.dark nav a {
+  color: #00ffb3;
+}
+
+.dark nav a:hover {
+  color: #825ba9;
+}
+
+/* ======== SECCIONES ======== */
+.dark section,
+.dark footer {
+  background: none;
+  background-color: #181818;
+  color: #e40000;
+}
+
+.dark .bg-white,
+.dark .bg-gray-50,
+.dark .bg-gray-100,
+.dark .bg-gradient-to-b {
+  background: #181818 !important;
+}
+
+.dark .text-gray-700,
+.dark .text-gray-800,
+.dark .text-gray-600 {
+  color: #ffffff !important;
+}
+
+/* ======== ELEMENTOS ESPECÍFICOS ======== */
+.dark .boton {
+  background-color: #292929;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+.dark .card-noticia,
+.dark .modal-content {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-color: #333;
+}
+
+.dark .kpop-section,
+.dark .kpop-botones-seccion {
+  background-color: #1a1a1a;
+}
+
+/* ======== PIE DE PÁGINA ======== */
+.dark footer {
+  background-color: #101010;
+  border-top: 1px solid #333;
+}
+
+
+    /* 💅 Fuente personalizada */
+    .font-italiana {
+      font-family: 'Italiana', serif;
+    }
+
+    /* 🔠 Título principal */
+    .estilo {
+      font-size: 70px;
+      text-align: center;
+    }
+    .estilo1 {
+      font-size: 40px;
+    }
+
+    /* 💫 Galería principal */
+    .section-img {
+      display: flex;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .section-img img {
+      width: 0px;
+      flex-grow: 1;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: 0.5s;
+    }
+
+    .section-img img:hover {
+      cursor: crosshair;
+      width: 150px;
+      opacity: 1;
+      filter: contrast(120%);
+    }
+
+/* Carrusel de logos */
+.logos-section {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  padding: 30px 0;
+  position: relative;
+}
+
+.carrusel {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  animation: scroll 35s linear infinite;
+}
+
+.image-container img {
+  width: 70px;
+  height: auto;
+  margin: 0 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.15);
+}
+
+/* 🔁 Animación infinita fluida */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+    /* Sección del texto tipo presentación */
+    .texto-intro {
+      background-color: #f3f4f6;
+      padding: 40px 80px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .titulo-intro {
+      text-align: center;
+      font-family: 'Italiana', serif;
+      color: #6b4b4b;
+      font-size: 28px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .texto-izquierda {
+      text-align: justify;
+      color: #222;
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    /* SLIDE 3D */
+    .slider3d {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+      background: linear-gradient(to bottom, #e56397, #7992c4);
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .slider3d-wrapper {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d;
+      animation: rotate 20s linear infinite;
+    }
+
+    .slider3d-wrapper span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform: rotateY(calc(var(--i) * 72deg)) translateZ(350px);
+    }
+
+    .slider3d-wrapper img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.5s ease;
+    }
+
+    .slider3d-wrapper img:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    /* Sección K-pop */
+.kpop-section {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;  /* 👈 ESTE ES EL ESPACIADO */
+  background-color: #f5f6fa;
+}
+
+    .kpop-text {
+      flex: 1;
+      text-align: left;
+      font-size: 1.1rem;
+      color: #222;
+      line-height: 1.7;
+      margin-left: 10px;
+    }
+
+    .kpop-text p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .btn-conocelos {
+      background: linear-gradient(90deg, #7b5cff, #00c2ff);
+      color: white;
+      font-weight: bold;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.3s;
+    }
+
+    .btn-conocelos:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    /* Grid de imágenes */
+    .grid-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      flex: 1;
+    }
+
+    .grid-logos img {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .grid-logos img:hover {
+      transform: scale(1.08);
+    }
+
+    /* Modal con fondo borroso */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      animation: fadeIn 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .cerrar {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      font-size: 50px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 1001;
+      font-weight: 300;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .cerrar:hover {
+      color: #ff6b6b;
+      transform: rotate(90deg) scale(1.2);
+    }
+
+    /* Contenedor principal del modal */
+    .modal-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      width: 100%;
+      animation: slideUp 0.4s ease;
+    }
+
+    /* Card superior con foto del grupo */
+    .modal-card-image {
+      position: relative;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-card-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .modal-team-label {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    /* Card inferior con texto */
+    .modal-card-text {
+      background: linear-gradient(135deg, #ffeef8 0%, #ffe4f1 100%);
+      border: 3px solid #ff69b4;
+      border-radius: 20px;
+      padding: 25px 30px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-card-text h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 0 0 15px 0;
+      font-family: 'Italiana', serif;
+      color: #d63384;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .modal-card-text p {
+      font-size: 1rem;
+      line-height: 1.7;
+      text-align: justify;
+      color: #34495e;
+      margin: 0 0 20px 0;
+    }
+
+    /* Grid de álbumes/música */
+    .modal-music-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .modal-music-grid img {
+      width: 100%;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .modal-music-grid img:hover {
+      transform: scale(1.1);
+    }
+
+    .modal-music-label {
+      background: linear-gradient(90deg, #ff6b9d 0%, #c471ed 100%);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* Puntos decorativos */
+    .decorative-dots {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin: 15px 0;
+    }
+
+    .decorative-dots span {
+      width: 8px;
+      height: 8px;
+      background: #d63384;
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    .decorative-dots span:nth-child(2) {
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsivo */
+    @media (max-width: 900px) {
+      .kpop-section {
+        flex-direction: column;
+      }
+      .grid-logos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-logos {
+        grid-template-columns: 1fr;
+      }
+      .modal-container {
+        max-width: 95%;
+      }
+      .modal-card-image img {
+        height: 150px;
+      }
+      .modal-card-text {
+        padding: 20px;
+      }
+      .modal-card-text h2 {
+        font-size: 1.4rem;
+      }
+      .cerrar {
+        font-size: 40px;
+        top: 15px;
+        right: 20px;
+      }
+      .modal-music-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  max-width: 1000px;
+  width: 85%;
+  color: white;
+}
+
+.modal-video {
+  width: 380px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.modal-info {
+  flex: 1;
+  text-align: justify;
+}
+
+.modal-info h2 {
+  text-align: center;
+  font-family: 'Italiana', serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.modal-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cerrar:hover {
+  color: #f8b500;
+  transform: scale(1.1);
+}
+/* 🎵 Fondo de la sección de botones */
+.kpop-botones-seccion {
+  margin-top: 50px;
+  background-color: #8c7ae6; /* lila claro */
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌈 Botones arriba */
+.botones-kpop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 🎨 Botones de colores */
+.boton {
+  border: none;
+  border-radius: 40px;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.boton.rojo { background-color: #a80d3a; }
+.boton.rosa { background-color: #c44b78; }
+.boton.lila { background-color: #c366da; }
+.boton.morado { background-color: #3c226b; }
+
+.boton:hover {
+  transform: scale(1.07);
+  opacity: 0.9;
+}
+
+/* 📄 Contenido debajo de los botones */
+.contenido-kpop {
+  background-color: #7b6de1;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* ✨ Título */
+.contenido-kpop h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* 📰 Cards de noticias */
+.card-noticia {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 40px;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-noticia img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .botones-kpop {
+    flex-direction: column;
+  }
+  .card-noticia {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card-noticia img {
+    margin: 0 0 0.5rem 0;
+  }
+}
+.boton {
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+.boton:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.boton.active {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+/* Colores */
+.rojo { background-color: #c2185b; }
+.rosa { background-color: #e57373; }
+.lila { background-color: #ba68c8; }
+.morado { background-color: #6774b9; }
+footer {
+  border-top: 3px solid #e0b3ff;
+}
+
+footer img {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  width: 500px;
+}
+.font-italiana {
+  font-family: 'Italiana', serif;
+}
+
+header a {
+  position: relative;
+}
+
+header a span {
+  display: block;
+  transition: width 0.3s ease;
+}
+
+header a:hover span {
+  width: 100%;
+}
